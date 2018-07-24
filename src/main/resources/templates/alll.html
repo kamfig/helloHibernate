@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>all</title>
+</head>
+<body>
+<nav>
+    <a href="/demo/a">dodawanie</a>
+    <a href="/demo/alll">Wszystkie</a>
+
+</nav>
+<ul>
+    <h1> lista</h1><table>
+    <tr>
+        <th>imie</th>
+        <th>mail</th>
+        <th>id</th>
+    </tr>
+    <tr th:each="User : ${user}">
+        <td th:text="${}"></td>
+        <td th:text="${User.email}"></td>
+        <td th:text="${User.id}"></td>
+    </tr>
+</ul>
+</body>
+</html>
